@@ -6,20 +6,21 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/custom.min.css">
-	<link rel="stylesheet" href="css/onepage-scroll.css">
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
 	<style>
 		/*Custom CSS here*/ 
 	</style>
 </head>
 <body>
 
-	<div class="main">
-	<section id="section1">
+	<div id="fullpage">
+	<div id="section1" class="section" data-anchor="firstPage">
 		<!-- front page background video stuff goes here -->
 		<!-- <div id="cta"> -->
 		<a href="#section2"><strong>Click Me!</strong></a> 
 		<!-- </div> -->
 	<div id="countdown">
+	<a href="#secondPage">Clickme!</a>
 		<h1>Countdown Clock</h1>
 		<div id="clockdiv">
 		  <div>
@@ -41,8 +42,8 @@
 		</div>
 	</div>
 
-	</section>
-	<section id="section2">
+	</div>
+	<div id="section2" class="section" data-anchor="secondPage">
 		<div class="information-container col-md-8 col-md-offset-2">
 
 			<!-- flexbox, icons and information goes here. Delete the placeholder stuff whenevs -->
@@ -53,34 +54,23 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, quo saepe, voluptate culpa at iste, fuga quisquam nemo a debitis accusantium ea iusto praesentium nihil laudantium nam. Suscipit, fugiat excepturi.</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, quo saepe, voluptate culpa at iste, fuga quisquam nemo a debitis accusantium ea iusto praesentium nihil laudantium nam. Suscipit, fugiat excepturi.</p>
 		</div>
-	</section>
+	</div>
 	</div>
 	<!-- Any HTML Ends Here -->
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="js/jquery.onepage-scroll.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
-    	$(".main").onepage_scroll({
-    	   sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-    	   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-    	                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-    	   animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
-    	   pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-    	   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-    	   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
-    	   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
-    	   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-    	   keyboard: true,                  // You can activate the keyboard controls
-    	   responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
-    	                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-    	                                    // the browser's width is less than 600, the fallback will kick in.
-    	   direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
-    	});
 
-$(".main").onepage_scroll();
+    	$(document).ready(function() {
+    		$('#fullpage').fullpage({
+    			anchors:['firstPage', 'secondPage']
+    		});
+		});
+
     </script>
 </body>
 </html>
