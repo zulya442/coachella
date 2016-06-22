@@ -50,11 +50,52 @@
 
 			<!-- flexbox, icons and information goes here. Delete the placeholder stuff whenevs -->
 			<h1>Info</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, quo saepe, voluptate culpa at iste, fuga quisquam nemo a debitis accusantium ea iusto praesentium nihil laudantium nam. Suscipit, fugiat excepturi.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, quo saepe, voluptate culpa at iste, fuga quisquam nemo a debitis accusantium ea iusto praesentium nihil laudantium nam. Suscipit, fugiat excepturi.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, quo saepe, voluptate culpa at iste, fuga quisquam nemo a debitis accusantium ea iusto praesentium nihil laudantium nam. Suscipit, fugiat excepturi.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, quo saepe, voluptate culpa at iste, fuga quisquam nemo a debitis accusantium ea iusto praesentium nihil laudantium nam. Suscipit, fugiat excepturi.</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, quo saepe, voluptate culpa at iste, fuga quisquam nemo a debitis accusantium ea iusto praesentium nihil laudantium nam. Suscipit, fugiat excepturi.</p>
+			<h1>Sign Up!</h1>
+			
+			  <div class="row">
+			    <div class="col-md-6 col-md-push-3">
+			      <form role="form" method="post" action="" id="contactform">
+			        <fieldset>
+			         
+
+			          <div class="form-group">
+			      
+			            <input placeholder="Name" type="text" name="contactname" id="contactname" value="" class="form-control required" role="input" aria-required="true" />
+			          </div>
+
+
+			          <div class="form-group">
+			           
+			            <input placeholder="Email" type="text" name="email" id="email" value="" class="form-control required email" role="input" aria-required="true" />
+			          </div>
+
+			          <div class="actions">
+
+			            
+			          </div>
+			        </fieldset>
+			      </form>
+			  
+
+				<!-- Button trigger modal -->
+				<button onclick="document.getElementById('theModal').style.display='block'" type="button" class="btn btn-primary btn-lg" id="submitModal">
+				  Submit
+				</button>
+
+				<div id="theModal" class="modalD col-md-12">
+
+				  <!-- Modal content -->
+				  <div class="theContent">
+				    <span onclick="document.getElementById('theModal').style.display='none'" class="close">x</span>
+				    <p id="modalText"></p>
+				  </div>
+
+				</div>
+				
+			  </div><!-- col -->
+			</div><!-- row -->
+
+			
 			<a class="scroll" href="#section1"><h1>Click Me!</h1></a> 
 		</div>
 
@@ -76,6 +117,20 @@
     		$('#fullpage').fullpage({
     			anchors:['firstPage', 'secondPage']
     		});
+		
+
+			$('#submitModal').on("click",function() {
+	 		    var value = $('#contactname').val();
+	 		    var email = $('#email').val();
+	 		    var text = document.getElementById('modalText');
+	 		    if (!value || !email){
+	 		      text.innerHTML = 'Please fill in your details';
+	 		    } else {
+	 		    	text.innerHTML = 'Thanks! We will be in touch soon';
+	 		    }
+	 		   
+	 		  });
+
 		});
 
     </script>
