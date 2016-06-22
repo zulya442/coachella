@@ -1,14 +1,8 @@
 // Example of a sass variable
 // $color:green;
-body{
-	text-align: center;
-	background: #00ECB9;
-  	font-family: sans-serif;
-  	font-weight: 100;
-}
 
 h1{
-  color: white;
+  color:blue;
   font-weight: 100;
   font-size: 40px;
   margin: 40px 0px 20px;
@@ -29,7 +23,7 @@ h1{
 	display: inline-block;
 }
 #countdown{
-	margin-top:35em;
+	padding-top:35em;
 	text-align: center;
 }
 
