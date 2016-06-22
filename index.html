@@ -6,18 +6,22 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/custom.min.css">
-	<!-- <link rel="stylesheet" href="css/onepage-scroll.css"> -->
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
-
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<style>
+		/*Custom CSS here*/ 
+	</style>
 </head>
 <body>
 
-<!-- <div id="fullpage"> -->
-	<div id="section1">
+	<div id="fullpage">
+	<div id="section1" class="section" data-anchor="firstPage">
 		<!-- front page background video stuff goes here -->
 		
 	<div id="countdown">
-		<a class="scroll" href="#section2"><h1>Click Me!</h1></a> 
+
+	<a href="#secondPage">Clickme!</a>
+		<h1>Countdown Clock</h1>
+
 		<div id="clockdiv">
 		  <div>
 		    <span class="days"></span>
@@ -39,7 +43,9 @@
 	</div>
 
 	</div>
-	<div id="section2">
+
+	<div id="section2" class="section" data-anchor="secondPage">
+
 		<div class="information-container col-md-8 col-md-offset-2">
 
 			<!-- flexbox, icons and information goes here. Delete the placeholder stuff whenevs -->
@@ -51,6 +57,9 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, quo saepe, voluptate culpa at iste, fuga quisquam nemo a debitis accusantium ea iusto praesentium nihil laudantium nam. Suscipit, fugiat excepturi.</p>
 			<a class="scroll" href="#section1"><h1>Click Me!</h1></a> 
 		</div>
+
+	</div>
+
 	</div>
 </div>
 	<!-- Any HTML Ends Here -->
@@ -58,20 +67,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+
+    <script src="js/jquery.fullPage.min.js"></script>
     <script src="js/custom.js"></script>
     <script>
-    $(function() { 
 
-    				$(".scroll").click(function(event){		
-    				event.preventDefault();
-    				$('html,body').animate({
-    					scrollTop:$(this.hash).offset().top}, 
-    					500
-    					);
-    				});
-
-    			});
+    	$(document).ready(function() {
+    		$('#fullpage').fullpage({
+    			anchors:['firstPage', 'secondPage']
+    		});
+		});
 
     </script>
    
