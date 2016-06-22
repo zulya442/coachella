@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 viewBox="0 0 640 640" enable-background="new 0 0 640 640" xml:space="preserve">
+		 <style>
+		 	@keyframes squash {
+		 		0%  {transform:scaleY(.9);}
+		 		10%  {transform:scaleY(.9);}
+		 	    50% {transform:scaleY(1.1);}
+		 	    90% {transform:scaleY(.9);}
+		 	    100% {transform:scaleY(.9);}
+		 	}
+
+		 	@keyframes boom {
+		 		0%  {transform:scale(.9);}
+		 		10%  {transform:scale(.9);}
+		 	    50% {transform:scale(1.15);}
+		 	    90% {transform:scale(.9);}
+		 	    100% {transform:scale(.9);}
+		 	}
+
+		 	#all-speak {
+		 		transform-origin:bottom;
+		 		animation: squash .5s ease-in-out infinite;
+		 	}
+
+		 	#bot-speak {
+		 		transform-origin:center;
+		 		animation: boom .5s ease-in-out infinite;
+		 		animation-delay: .03s;
+		 	}
+
+		 	#top-speak {
+		 		transform-origin:center;
+		 		animation: boom .5s ease-in-out infinite;
+		 		animation-delay: .08s;
+		 	}
+
+		 	#speak-shade{
+		 		transform:translateX(-1px);
+		 	}
+
+		 	#shadow{
+		 		transform:scaleY(.2);
+		 		transform-origin:center;
+		 	}
+		 </style>
+	<g id="all-speak">
+		<circle id="shadow" fill="#E6E6E6" cx="300" cy="580" r="250"/>
+		<g id="speak">
+			<polyline id="speak-body" fill="#4e68b2" points="385.2,74 203.8,102.5 99.4,566 426.5,590 	"/>
+			<polygon id="speak-shade" fill="#1e2861" points="385.2,74 426.5,590 510.5,575.5 445,132.2 	"/>
+		</g>
+		<g id="bot-speak">
+			<circle id="bot-big" fill="#2d3253" cx="265" cy="437" r="107"/>
+			<circle id="bot-medium" fill="#12183b" cx="263.5" cy="432.5" r="40.5"/>
+			<circle id="bot-small" fill="#E6E6E6" cx="251.9" cy="410.4" r="11.3"/>
+		</g>
+		<g id="top-speak">
+			<circle id="top-big" fill="#2d3253" cx="289.5" cy="216.5" r="80.5"/>
+			<circle id="top-medium" fill="#12183b" cx="289.5" cy="216.5" r="35.5"/>
+			<circle id="top-small" fill="#E6E6E6" cx="278" cy="197.3" r="6.3"/>
+		</g>
+
+	</g>
+
+
+	<script>
+
+	</script>
+	</svg>
