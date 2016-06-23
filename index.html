@@ -5,6 +5,7 @@
 	<title>Coachella</title>
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/custom.min.css">
 	<link rel="stylesheet" href="css/jquery.fullPage.css">
 	<style>
@@ -12,6 +13,15 @@
 	</style>
 </head>
 <body>
+<div id="theModal" class="modalD col-md-12">
+
+  <!-- Modal content -->
+  <div class="theContent">
+    <span onclick="document.getElementById('theModal').style.display='none'" class="close">x</span>
+    <p id="modalText"></p>
+  </div>
+
+</div>
 
 	<div id="fullpage">
 	<div id="section1" class="section" data-anchor="firstPage">
@@ -49,7 +59,8 @@
 		<div class="information-container col-md-8 col-md-offset-2">
 
 			<!-- flexbox, icons and information goes here. Delete the placeholder stuff whenevs -->
-			<h1>Info</h1>
+
+			
 			<h1>Sign Up!</h1>
 			
 			  <div class="row">
@@ -82,21 +93,56 @@
 				  Submit
 				</button>
 
-				<div id="theModal" class="modalD col-md-12">
 
-				  <!-- Modal content -->
-				  <div class="theContent">
-				    <span onclick="document.getElementById('theModal').style.display='none'" class="close">x</span>
-				    <p id="modalText"></p>
-				  </div>
-
-				</div>
 				
 			  </div><!-- col -->
 			</div><!-- row -->
 
+			<div class="info-sections">
+				<div class="music-info info">
+					<div class="music-arrow arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+					<div class="music-text text">
+						<h2>Music</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus sapiente ipsum cupiditate, minima </p>
+					</div>
+					<div class="music-icon icon">
+						<object id="speaker-svg" type="image/svg+xml" data="img/speaker.svg">
+						  Your browser does not support SVG
+						</object>
+					</div>
+				</div>
+
+				<div class="art-info info">
+					<div class="art-icon icon">
+						<object id="butterfly-svg" type="image/svg+xml" data="img/butterfly.svg">
+						  Your browser does not support SVG
+						</object>
+					</div>
+					
+					<div class="art-text text">
+						<h2>Art</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus sapiente ipsum cupiditate, </p>
+					</div>
+					<div class="art-arrow arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></div>
+				</div>
+
+				<div class="where-info info">
+					<div class="where-arrow arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
+					<div class="where-text text">
+						<h2>Where</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minus sapiente ipsum cupiditate, </p>
+					</div>
+					<div class="where-icon icon">
+						<object id="nav-svg" type="image/svg+xml" data="img/nav.svg">
+						  Your browser does not support SVG
+						</object>
+					</div>
+				</div>
+			</div>
+
 			
-			<a class="scroll" href="#section1"><h1>Click Me!</h1></a> 
+			
+
 		</div>
 
 	</div>
