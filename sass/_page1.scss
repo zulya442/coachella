@@ -1,4 +1,37 @@
 #section1{
-	background:url("../img/bg-image.jpg") no-repeat center center fixed;
+	background:transparent!important;
 	background-size: cover;
+	padding:0!important;
 }
+
+#mute{
+	position:absolute;
+	width:55px;
+	height:40px;
+	right:20px;
+	top:20px;
+	z-index:1;
+	}
+
+#unmute{
+	display:none;
+	position:absolute;
+	width:53px;
+	height:33px;
+	right:20px;
+	top:23px;
+	z-index:1;
+	
+}
+
+.vidpage{
+	position:absolute;
+	z-index:-1;
+
+}
+
+#mute, #unmute{
+		z-index:9999999999;
+	}
+
+

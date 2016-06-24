@@ -94,16 +94,85 @@ $(document).ready(function() {
 
         //events
         onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
+        afterLoad: function(anchorLink, index){
+              var loadedSection = $(this);
+
+              //using anchorLink
+              if(anchorLink == 'secondPage'){
+                  $(".signup-container").addClass("signup-active");
+              }
+          
+        },
+        afterRender: function(){
+          $('video').get(0).play();
+          $('audio').get(0).play();
+        },
         afterResize: function(){},
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
     });
 });
 
-// $(document).ready(function() {
-//     $('#fullpage').fullpage({
-//         anchors:['section2', 'section1']
-//     });
-// });
+function modalInit(){
+    $('#submitModal').on("click",function() {
+        var value = $('#contactname').val();
+        var email = $('#email').val();
+        var text = document.getElementById('modalText');
+        if (!value || !email){
+          text.innerHTML = 'Please fill in your details';
+        } else {
+          text.innerHTML = 'Thanks! We will be in touch soon';
+        }
+       
+      });
+
+  };
+
+
+modalInit();
+
+function arrowMover(){
+  $(".music-info").hover(function(){
+    $(".music-arrow").toggleClass("arrow-mover");
+  });
+  $(".art-info").hover(function(){
+    $(".art-arrow").toggleClass("arrow-mover");
+  });
+  $(".where-info").hover(function(){
+    $(".where-arrow").toggleClass("arrow-mover");
+  });
+}
+
+arrowMover();
+
+//Annabel's code
+  var audio = document.getElementById('background_audio');
+
+  document.getElementById('mute').addEventListener('click', function (e)
+  {
+    e = e || window.event;
+      audio.muted = !audio.muted; 
+      e.preventDefault();
+    }, false);
+
+  document.getElementById('unmute').addEventListener('click', function (e)
+  {
+    e = e || window.event;
+      audio.muted = !audio.muted; 
+      e.preventDefault();
+    }, false);
+
+  $(document).ready(function(){
+  
+  $( "#mute" ).click(function(){
+  $("#mute").hide();
+  $("#unmute").show();
+  });
+
+  $( "#unmute" ).click(function(){
+  $("#unmute").hide();
+  $("#mute").show();
+  });
+});
+// * annabels code ends
+   

@@ -4,10 +4,13 @@
 	<meta charset="UTF-8">
 	<title>Coachella</title>
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/custom.min.css">
 	<link rel="stylesheet" href="css/jquery.fullPage.css">
+
 	<style>
 		/*Custom CSS here*/ 
 	</style>
@@ -24,81 +27,99 @@
 </div>
 
 	<div id="fullpage">
-	<div id="section1" class="section" data-anchor="firstPage">
+	<div id="section1" class="section overlay" data-anchor="firstPage">
+		<img id="mute" src="img/greyun.png">
+		<img id="unmute" src="img/grey.png"> 
+
+			<div class="vidpage">
+				
+						<video loop muted autoplay poster="img/coach.jpg" class="poster">
+	    					<source src="video/coachella.mp4" type="video/mp4">
+	        				<source src="video/coachella.ogv" type="video/ogg">
+	        			</video>
+			</div>
+	 
+	 			<audio id="background_audio" autoplay="autoplay">
+					<source id="vio" src="video/coco.mp3" type="audio/mpeg">
+				</audio>
 		<!-- front page background video stuff goes here -->
+	<span>
 		
-	<div id="countdown">
+		<div id="countdown">
 
-	<a href="#secondPage">Clickme!</a>
-		<h1>Countdown Clock</h1>
+			<a href="#secondPage"><h1>Enter Now!</h1></a>
 
-		<div id="clockdiv">
-		  <div>
-		    <span class="days"></span>
-		    <div class="smalltext">Days</div>
-		  </div>
-		  <div>
-		    <span class="hours"></span>
-		    <div class="smalltext">Hours</div>
-		  </div>
-		  <div>
-		    <span class="minutes"></span>
-		    <div class="smalltext">Minutes</div>
-		  </div>
-		  <div>
-		    <span class="seconds"></span>
-		    <div class="smalltext">Seconds</div>
-		  </div>
+			<div id="clockdiv">
+		  		<div>
+		    		<span class="days"></span>
+		    		<div class="smalltext">Days</div>
+		  		</div>
+		  		<div>
+		    		<span class="hours"></span>
+		    		<div class="smalltext">Hours</div>
+		  		</div>
+		  		<div>
+		    		<span class="minutes"></span>
+		    		<div class="smalltext">Minutes</div>
+		  		</div>
+		  		<div>
+		    		<span class="seconds"></span>
+		    		<div class="smalltext">Seconds</div>
+		  		</div>
+			</div>
+
 		</div>
+
+	</span>
 	</div>
 
-	</div>
+	
 
 	<div id="section2" class="section" data-anchor="secondPage">
+	  <div class="signup-container">
+	    <div class="signup-wrapper">
+	    <div class="signup-text-wrapper">
+	    	<h4>SIGN UP FOR MORE!</h4>
+	    	</div>
+	      <form role="form" method="post" action="" id="contactform">
+	        <fieldset>
+	         
 
-		<div class="information-container col-md-8 col-md-offset-2">
+	          <div class="form-group">
+	      
+	            <input placeholder="Name" type="text" name="contactname" id="contactname" value="" class="form-control required" role="input" aria-required="true" />
+	          </div>
+
+
+	          <div class="form-group">
+	           
+	            <input placeholder="Email" type="text" name="email" id="email" value="" class="form-control required email" role="input" aria-required="true" />
+	          </div>
+
+	          <div class="actions">
+
+	            
+	          </div>
+	        </fieldset>
+	      </form>
+	  
+
+		<!-- Button trigger modal -->
+		<button onclick="document.getElementById('theModal').style.display='block'" type="button" class="btn btn-primary btn-lg" id="submitModal">
+		  Submit
+		</button>
+
+
+		
+	  </div><!-- col -->
+	</div><!-- row -->
+
+		<div class="information-container">
 
 			<!-- flexbox, icons and information goes here. Delete the placeholder stuff whenevs -->
 
-			
-			<h1>Sign Up!</h1>
-			
-			  <div class="row">
-			    <div class="col-md-6 col-md-push-3">
-			      <form role="form" method="post" action="" id="contactform">
-			        <fieldset>
-			         
-
-			          <div class="form-group">
-			      
-			            <input placeholder="Name" type="text" name="contactname" id="contactname" value="" class="form-control required" role="input" aria-required="true" />
-			          </div>
-
-
-			          <div class="form-group">
-			           
-			            <input placeholder="Email" type="text" name="email" id="email" value="" class="form-control required email" role="input" aria-required="true" />
-			          </div>
-
-			          <div class="actions">
-
-			            
-			          </div>
-			        </fieldset>
-			      </form>
-			  
-
-				<!-- Button trigger modal -->
-				<button onclick="document.getElementById('theModal').style.display='block'" type="button" class="btn btn-primary btn-lg" id="submitModal">
-				  Submit
-				</button>
-
-
-				
-			  </div><!-- col -->
-			</div><!-- row -->
-
 			<div class="info-sections">
+				<h2 class="info-sections-title">Get Informed!</h2>
 				<div class="music-info info">
 					<div class="music-arrow arrow"><i class="fa fa-angle-left" aria-hidden="true"></i></div>
 					<div class="music-text text">
@@ -149,35 +170,25 @@
 
 	</div>
 </div>
+</div>
 	<!-- Any HTML Ends Here -->
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
     <script src="js/jquery.fullPage.min.js"></script>
+
     <script src="js/custom.js"></script>
     <script>
 
-    	$(document).ready(function() {
-    		$('#fullpage').fullpage({
-    			anchors:['firstPage', 'secondPage']
-    		});
+
 		
 
-			$('#submitModal').on("click",function() {
-	 		    var value = $('#contactname').val();
-	 		    var email = $('#email').val();
-	 		    var text = document.getElementById('modalText');
-	 		    if (!value || !email){
-	 		      text.innerHTML = 'Please fill in your details';
-	 		    } else {
-	 		    	text.innerHTML = 'Thanks! We will be in touch soon';
-	 		    }
-	 		   
-	 		  });
+			
 
-		});
+		
+		
 
     </script>
    
